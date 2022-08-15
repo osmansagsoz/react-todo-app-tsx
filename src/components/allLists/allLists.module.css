@@ -1,0 +1,90 @@
+  /* Lists styles */
+.allLists {
+    width: 200px;
+  }
+  .allLists label {
+    margin-top: 1rem;
+  }
+  
+  .todoListsTitle {
+    margin: 0 0 0 0.5em;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .listsButton {
+    margin: 0.2em 0 0 0.2em;
+    transition: opacity 0.2s ease-in;
+  }
+  .listsButton:hover {
+    opacity: 0.7;
+  }
+  
+  .dropdown {
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.4s ease-in-out;
+  }
+  
+  .dropdownOpen {
+    height: 100%;
+  }
+  
+  .todoLists {
+    line-height: 1.5;
+    font-size: 0.9rem;
+  }
+  
+  .todoLists li {
+      cursor: pointer;
+  }
+  .todoLists li:hover {
+      opacity: 0.7;
+  }
+  
+  .activeList {
+    font-weight: 700;
+    color: var(--purple);
+  }
+  
+  .newList {
+    background: transparent;
+    border: 0;
+    color: var(--magenta);
+    border-bottom: 1px solid currentColor;
+    outline: none;
+    transition: border-bottom 150ms ease-in;
+    font-size: 0.9rem;
+  }
+  
+  .newList:focus {
+    border-bottom-width: 2.5px;
+  }
+  .newList:focus::placeholder {
+    opacity: 0.2;
+  }
+  
+  .listButton {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 0.2em;
+    transition: opacity 200ms ease-in;
+  }
+  
+  .listButton:hover {
+    opacity: 0.7;
+  }
+
+  @media (min-width: 550px) {
+    .dropdown {
+      height: 100%;
+    }
+  
+    .allLists {
+      grid-area: list;
+      margin-top: 1.5rem;
+      margin-left: 1rem;
+    }
+  }
+  

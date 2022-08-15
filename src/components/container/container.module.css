@@ -1,0 +1,268 @@
+/* Header designs */
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin-top: 3rem;
+}
+
+.headerP {
+  margin-top: 0;
+  color: var(--purple);
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+/* Todo Area Design */
+.todoArea {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.inputField {
+  /* display: block; */
+  height: 100px;
+  width: 100%;
+  min-width: 140px;
+  max-width: 280px;
+}
+
+.mainForm {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  position: relative;
+}
+
+.mainInput {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  color: var(--magenta);
+  border-radius: 0.2em;
+  border: 2px solid transparent;
+  outline: none;
+  font-size: 18px;
+  transition: all 0.2s;
+  box-shadow: 0 0 1px var(--lavender);
+  padding: 0;
+  text-indent: 5px;
+  text-align: start;
+}
+
+.mainInput:hover {
+  cursor: pointer;
+  background-color: var(--gray);
+}
+
+.mainInput:focus {
+  cursor: text;
+  background-color: white;
+  border-color: var(--purple);
+}
+
+.extraField {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+}
+
+.dateField {
+  position: relative;
+  border: 1px solid var(--lavender);
+  border-radius: 0.2em;
+  padding: 3px 5px;
+  margin: 0 0 2px 2px;
+}
+.dateField:hover {
+  opacity: 0.7;
+  background-color: var(--gray);
+}
+
+.timeForm {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.timeForm input {
+  width: 85px;
+  color: var(--magenta);
+  border-radius: 0.2em;
+  border: 2px solid transparent;
+  outline: none;
+  transition: all 0.2s;
+  box-shadow: 0 0 1px var(--lavender);
+}
+
+.timeForm input:hover {
+  cursor: pointer;
+  background-color: var(--gray);
+}
+
+.timeForm input:focus {
+  cursor: text;
+  background-color: white;
+  border-color: var(--purple);
+}
+
+.popper {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  bottom: -40px;
+  left: -10px;
+  padding: 5px;
+  border-radius: 0.2em;
+  background-color: var(--lavender);
+}
+.popper button {
+  border: 1px solid var(--purple);
+  border-radius: 0.2em;
+  background-color: var(--purple);
+  color: white;
+  padding: 2px 6px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.popper button:hover {
+  opacity: 0.7;
+}
+
+.todoTags {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.priWrapper {
+  position: relative;
+  padding-bottom: 0;
+}
+.priority {
+  margin-bottom: 0;
+  padding-right: 11px;
+  padding-left: 5px;
+}
+.priority:hover {
+  opacity: 0.7;
+}
+
+.priPopper {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  width: 150px;
+  bottom: -95px;
+  left: -50px;
+  padding: 5px;
+  margin-top: 0;
+  border-radius: 0.2em;
+  background-color: white;
+}
+.priPopper ul {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.priPopper li {
+  margin-bottom: 0.2em;
+  padding: 3px 8px;
+  display: block;
+}
+.priPopper input {
+  visibility: hidden;
+}
+.priPopper label {
+  cursor: pointer;
+}
+.priPopper label:hover {
+  opacity: 0.7;
+}
+
+.tagWrapper {
+  position: relative;
+}
+
+.listTag {
+  margin-bottom: 0;
+  padding-right: 11px;
+  padding-left: 5px;
+}
+.listTag:hover {
+  opacity: 0.7;
+}
+
+.tagPopper {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  bottom: -30px;
+  left: -24px;
+  color: var(--magenta);
+  background: white;
+  border-radius: 0.2em;
+  border: 2px solid transparent;
+  outline: none;
+  transition: all 0.2s;
+  box-shadow: 0 0 1px var(--lavender);
+  padding: 3px;
+}
+
+.tagPopper:hover {
+  cursor: pointer;
+  background-color: var(--gray);
+}
+
+.tagPopper:focus {
+  cursor: pointer;
+  background-color: white;
+  border-color: var(--purple);
+}
+.submitButton {
+  border: 1px solid var(--lavender);
+  border-radius: 0.2em;
+  padding: 3px 5px;
+  margin: 0 2px 2px 2px;
+}
+.submitButton:hover {
+  opacity: 0.7;
+  background-color: var(--gray);
+}
+
+.popperOpen {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+@media (min-width: 550px) {
+  .container {
+    grid-area: header;
+  }
+
+  .inputField {
+    min-width: 500px;
+  }
+}

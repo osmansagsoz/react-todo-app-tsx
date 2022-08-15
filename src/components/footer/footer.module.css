@@ -1,0 +1,21 @@
+  /* footer design */
+footer h3 {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 2rem;
+  }
+  
+  .foot {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 16px;
+    list-style-type: none;
+  }
+
+  @media (min-width: 550px) {
+  
+    footer {
+      grid-area: footer;
+    }
+  }

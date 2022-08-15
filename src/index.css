@@ -1,0 +1,35 @@
+:root {
+    --lilac: #ebecf3;
+    --lavender: #c6bcf9;
+    --purple: #6355ab;
+    --peach: #ffc39e;
+    --orange: #ff8f4f;
+    --rose: #ffccd1;
+    --gray: #f1f2f7;
+    --magenta: #0b113c;
+    --babyblue: #d6f1fe;
+    --darkrose: #f34e5f;
+    --darkpeach: #f78f4e;
+    --darkblue: #9fdbf8;
+    --myFont: "Inconsolata", monospace;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  /* :global(.title) {
+      color: yellow;
+  } */
+  
+  body {
+    background-color: var(--lilac);
+    font-family: var(--myFont);
+    color: var(--magenta);
+  }
+
+  button {
+    cursor: pointer;
+    background: 0;
+    padding: 0;
+    border: 0;
+  }
