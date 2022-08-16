@@ -1,6 +1,8 @@
+import { TagType } from "../types";
+
 const tagsUrl = `${process.env.REACT_APP_TODO_API_BASE_URL}/tags`;
 
-export const createTag = async ({ name }) => {
+export const createTag = async ({ name }: { name: string }) => {
   const result = await fetch(tagsUrl, {
     body: JSON.stringify({ name }),
     headers: {
@@ -19,7 +21,7 @@ export const getAllTags = async () => {
   return data;
 };
 
-export const deleteTag = async (tag) => {
+export const deleteTag = async (tag: TagType) => {
   const result = await fetch(`${tagsUrl}/${tag.id}`, {
     method: 'DELETE',
   });

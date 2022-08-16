@@ -6,6 +6,7 @@ import TodoListArea from "../todoListArea/todoListArea";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { createTag, deleteTag, getAllTags } from "../../services/tags";
 import { createTodo, deleteTodos, getTodos, updateTodo } from "../../services/todos";
+import { TagType } from "../../types";
 
 // console.log(css);
 export const App = () => {
@@ -60,7 +61,7 @@ export const App = () => {
   }, []);
 
   const onSelectedTagChange = useCallback(
-    (nextSelectedTag) => {
+    (nextSelectedTag: TagType) => {
       const tagIndex = tags.findIndex((tag) => tag.id === nextSelectedTag.id);
       if (tagIndex > -1) {
         setSelectedTag(nextSelectedTag);

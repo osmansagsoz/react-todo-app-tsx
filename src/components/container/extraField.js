@@ -141,7 +141,7 @@ const ExtraField = ({
               <option value="">--Choose--</option>
               {tags.map((tag) => {
                 return (
-                  <option key={tag.id} value={tag.id}>
+                  <option key={tag.id} value={parseInt(tag.id)}>
                     {tag.name}
                   </option>
                 );
