@@ -11,7 +11,7 @@ interface IProps {
   onTodoCreated: (params: TodoType) => void;
 }
 
-export const Container: FunctionComponent<IProps> = ({ tags, onTagCreated, appState, onTodoCreated }) => {
+export const Container = ({ tags, onTagCreated, appState, onTodoCreated }: IProps) => {
   return (
     <section className={css.container}>
       <Header appState={appState} />

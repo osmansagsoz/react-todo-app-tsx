@@ -4,7 +4,7 @@ import { faList } from "@fortawesome/free-solid-svg-icons";
 import ListItem from "./listItem";
 import { Loader } from "../loader/loader";
 import { useDropdown } from "./useDropdown";
-import { useState, useCallback, FunctionComponent, ChangeEventHandler, FormEventHandler } from "react";
+import { useState, useCallback, FunctionComponent, ChangeEvent, FormEvent } from "react";
 import { TagType } from "../../types";
 
 interface IProps {
@@ -19,10 +19,11 @@ const AllLists: FunctionComponent<IProps> = ({ onSelectedTagChange, onTagCreated
 
   const [newTag, setNewTag] = useState("");
 
-  const onNewTagChange = useCallback((event: ChangeEventHandler<HTMLInputElement>) => setNewTag((event.target.value) as string), []);
+  const onNewTagChange = useCallback((event: ChangeEvent<HTMLInputElement>) => setNewTag((event.target.value) as string), []);
 
+  // useCallback<ChangeEventHandler<HTMLInputElement>(() => {}, [])>
   const handleListSubmit = useCallback(
-    async (event: FormEventHandler<HTMLFormElement>) => {
+    async (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
 
       const newTagName = newTag.trim(); // "  asdas  " => "asdas"
